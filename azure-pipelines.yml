@@ -24,7 +24,7 @@ steps:
     scannerMode: 'MSBuild'
     projectKey: 'anvegac_spring-boot-kubernetes'
     projectName: 'Code review anvegac'
-- task: SonarCloudAnalyze@1
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
+  displayName: 'Publish Analysis Results'
