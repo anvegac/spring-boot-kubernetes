@@ -21,22 +21,6 @@ steps:
   inputs:
     SonarCloud: 'conexion con SonarCloud'
     organization: 'anvegac'
-    scannerMode: 'MSBuild'
     projectKey: 'anvegac_spring-boot-kubernetes'
     projectName: 'spring-boot-kubernetes'
-    displayName: 'Preparing Sonarqube Environment'
-    
-- task: Gradle@3
-    inputs:
-      gradleWrapperFile: 'gradlew'
-      tasks: "sonarqube"
-      javaHomeOption: 'JDKVersion'
-      sonarQubeRunAnalysis: true
-      sqGradlePluginVersionChoice: 'specify'
-      sonarQubeGradlePluginVersion: '3.3'
-    displayName: 'Analyze current Branch'    
-    
-- task: SonarCloudPublish@1
-  inputs:
-    pollingTimeoutSec: '300'
-  displayName: 'Publish Analysis Results'
+    displayName: 'Preparing Sonarcloud Environment'
