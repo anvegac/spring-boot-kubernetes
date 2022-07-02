@@ -22,7 +22,7 @@ steps:
     SonarCloud: 'conexion con SonarCloud'
     organization: 'anvegac'
     scannerMode: 'MSBuild'
-    projectKey: 'anvegac'
+    projectKey: 'anvegac_spring-boot-kubernetes'
     projectName: 'Code review anvegac'
 - task: SonarCloudPublish@1
   inputs:
