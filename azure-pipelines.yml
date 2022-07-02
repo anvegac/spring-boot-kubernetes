@@ -30,7 +30,7 @@ steps:
     organization: 'anvegac'
     projectKey: 'anvegac_spring-boot-kubernetes'
     projectName: 'spring-boot-kubernetes'
-    displayName: 'Preparing Sonarcloud Environmen
+    displayName: 'Code reviwev'
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
