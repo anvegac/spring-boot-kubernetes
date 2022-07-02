@@ -24,3 +24,7 @@ steps:
     projectKey: 'anvegac_spring-boot-kubernetes'
     projectName: 'spring-boot-kubernetes'
     displayName: 'Preparing Sonarcloud Environment'
+- task: SonarCloudAnalyze@1
+- task: SonarCloudPublish@1
+  inputs:
+    pollingTimeoutSec: '300'
