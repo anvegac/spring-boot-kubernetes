@@ -23,7 +23,8 @@ steps:
     organization: 'anvegac'
     scannerMode: 'MSBuild'
     projectKey: 'anvegac_spring-boot-kubernetes'
-    projectName: 'Code review anvegac'
+    projectName: 'spring-boot-kubernetes'
+    displayName: 'Preparing Sonarqube Environment'
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
