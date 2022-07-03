@@ -21,16 +21,5 @@ steps:
   inputs:
     SonarCloud: 'conexion con SonarCloud'
     organization: 'anvegac'
-    projectKey: 'anvegac_spring-boot-kubernetes'
-    projectName: 'spring-boot-kubernetes'
-    displayName: 'Preparing Sonarcloud Environment'
+    scannerMode: 'Other'
 - task: SonarCloudAnalyze@1
-  inputs:
-    SonarCloud: 'conexion con SonarCloud'
-    organization: 'anvegac'
-    projectKey: 'anvegac_spring-boot-kubernetes'
-    projectName: 'spring-boot-kubernetes'
-    displayName: 'Code reviwev'
-- task: SonarCloudPublish@1
-  inputs:
-    pollingTimeoutSec: '300'
