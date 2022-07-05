@@ -27,11 +27,5 @@ steps:
     mavenAuthenticateFeed: false
     effectivePomSkip: false
     sonarQubeRunAnalysis: true
-    sqMavenPluginVersionChoice: 'pom'
-- task: SonarCloudPrepare@1
-  inputs:
-    SonarCloud: 'conexion con SonarCloud'
-    organization: 'anvegac'
-    scannerMode: 'Other'
-- task: SonarCloudAnalyze@1
-
+    sqMavenPluginVersionChoice: 'latest'
+    checkStyleRunAnalysis: true
