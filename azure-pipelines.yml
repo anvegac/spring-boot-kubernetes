@@ -52,3 +52,4 @@ steps:
     SonarCloud: 'conexion con SonarCloud'
     organization: 'anvegac'
     scannerMode: 'Other'
+- task: SonarCloudAnalyze@1
