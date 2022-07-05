@@ -47,3 +47,8 @@ steps:
     #checkStyleRunAnalysis: false # Optional
     #pmdRunAnalysis: false # Optional
     #findBugsRunAnalysis: false # Optional
+- task: SonarCloudPrepare@1
+  inputs:
+    SonarCloud: 'conexion con SonarCloud'
+    organization: 'anvegac'
+    scannerMode: 'Other'
