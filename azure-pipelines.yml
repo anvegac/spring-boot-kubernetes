@@ -24,6 +24,7 @@ steps:
     projectKey: 'anvegac_spring-boot-kubernetes'
     projectName: 'spring-boot-kubernetes'
     scannerMode: 'Other'
+
 # Maven
 # Build, test, and deploy with Apache Maven
 - task: Maven@3
@@ -40,3 +41,9 @@ steps:
 - task: SonarCloudPublish@1
   inputs:
     pollingTimeoutSec: '300'
+  displayName: 'Publish Analysis Results'
+- task: sonarcloud-buildbreaker@2
+  inputs:
+    SonarCloud: 'SonarCloud'
+    organization: 'anvegac'
+    
