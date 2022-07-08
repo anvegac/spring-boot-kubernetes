@@ -46,4 +46,9 @@ steps:
   inputs:
     SonarCloud: 'SonarCloud'
     organization: 'anvegac'
+- task: dependency-check-build-task@6
+  inputs:
+    projectName: 'anvegac.spring-boot-kubernetes'
+    scanPath: '$(Pipeline.Workspace)'
+    format: 'HTML'
     
