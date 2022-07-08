@@ -51,4 +51,5 @@ steps:
     projectName: 'anvegac.spring-boot-kubernetes'
     scanPath: '$(Pipeline.Workspace)'
     format: 'HTML'
+    failOnCVSS: '7.0'
     
