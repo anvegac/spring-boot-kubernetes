@@ -46,4 +46,8 @@ steps:
   inputs:
     pollingTimeoutSec: '300'
   displayName: 'Publish Analysis Results'
-    
+- task: dependency-check-build-task@6
+  inputs:
+    projectName: 'anvegac.spring-boot-kubernetes'
+    scanPath: '$(Pipeline.Workspace)'
+    format: 'HTML'
