@@ -38,18 +38,12 @@ steps:
     effectivePomSkip: false
     sonarQubeRunAnalysis: true
     sqMavenPluginVersionChoice: 'latest'
-- task: SonarCloudPublish@1
-  inputs:
-    pollingTimeoutSec: '300'
-  displayName: 'Publish Analysis Results'
 - task: sonarcloud-buildbreaker@2
   inputs:
     SonarCloud: 'SonarCloud'
     organization: 'anvegac'
-- task: dependency-check-build-task@6
+- task: SonarCloudPublish@1
   inputs:
-    projectName: 'anvegac.spring-boot-kubernetes'
-    scanPath: '$(Pipeline.Workspace)'
-    format: 'HTML'
-    failOnCVSS: '7.0'
+    pollingTimeoutSec: '300'
+  displayName: 'Publish Analysis Results'
     
